@@ -1,0 +1,70 @@
+
+{% extends  'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+    <h1>Corequiz</h1>
+</div>
+
+<form class="row g-3" action="/data" method = "POST">
+  <h3> Title </h3>
+  <input type="text" name="title" placeholder="Title of the pdf"> 
+  <hr style="height:5px;border-width:10;color:rgb(255, 1, 1);background-color:rgb(255, 0, 0)">
+
+  <h3> Multi Select </h3>
+  <div class="form-check">
+    <input  type="checkbox" class="form-check-input" name = "multi_select_true" value="True">
+    <label class="form-check-label" for="flexCheckDefault"><b>True</b></label>
+    
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" name = "multi_select_false" type="checkbox" value="False" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault"><b>False</b></label>
+  </div>
+  <hr style="height:5px;border-width:10;color:rgb(255, 1, 1);background-color:rgb(255, 0, 0)">
+  <h3> Explanation </h3>
+  <div class="form-check">
+    <input  type="checkbox" class="form-check-input" name = "Explanation_true" value="True">
+    <label class="form-check-label" for="flexCheckDefault"><b>True</b></label>
+    
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" name = "Explanation_false" type="checkbox" value="False" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault"><b>False</b></label>
+  </div>
+    <body>
+      <hr style="height:5px;border-width:10;color:rgb(255, 1, 1);background-color:rgb(255, 0, 0)">
+
+    <h3>Number of choices</h3>
+    <label class="container">1
+      <input type="checkbox" name = "choices1" value = "1" >
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">2
+      <input type="checkbox" name = "choices2" value = "2" >
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">3
+      <input type="checkbox" name = "choices3" value = "3" >
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">4
+      <input type="checkbox" name = "choices4" value = "4" >
+      <span class="checkmark"></span>
+    </label>
+    <hr style="height:5px;border-width:10;color:rgb(255, 1, 1);background-color:rgb(255, 0, 0)">
+    <h3> Total Questions </h3>
+  <input type="text" name="no_questions" placeholder="Number of quetions (Single Digit)"> 
+  <hr style="height:5px;border-width:10;color:rgb(255, 1, 1);background-color:rgb(255, 0, 0)">
+  <div class="d-grid gap-2 col-6 mx-auto col mb-3">
+    <button type="submit" name = "Start" value = "Start" class="btn btn-outline-dark btn-lg">Start</button>
+</div>
+
+  
+  
+
+        
+</form>
+
+
+{% endblock %}quizzes

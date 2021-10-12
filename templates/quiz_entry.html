@@ -1,0 +1,135 @@
+
+{% extends  'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+    <h1>Corequiz</h1>
+</div>
+
+<form class="row g-3" action="/data" method = "POST">
+
+    <div class="mb-4">
+        <label for="formGroupExampleInput" class="form-label"> <b>Question (Plain Text)</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Paste Your Question Here." name = "question">
+        <label for="formGroupExampleInput" class="form-label"> <b>Sub Topic (Bullet points/Star poinst/any points.)</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Sub topics seperated. (If many seperat them by '$$') " name = "question_sub_topic" >
+        <label for="formGroupExampleInput" class="form-label"> <b>Question (Image Links)</b></label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Paste Your Question image link  Here. (If many seperat them by '$$')" name = "question_img" >
+    </div>
+    <hr style="height:5px;border-width:0;color:rgb(255, 0, 0);background-color:rgb(218, 0, 0)">
+    <div class="row">
+        <label for="formGroupExampleInput" class="form-label"> <b> Text Contain Options ( Use the plain text without any extra symbols )</b></label>
+        <div class="col mb-3"><div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="checkbox_1" value = 1 aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input type="text" class="form-control"  name = "option_1" placeholder="Option - 1 (If many seperat them by '$$')" aria-label="Option - 1 ">
+          </div>
+             
+        </div>
+
+        <div class="col mb-3"><div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="checkbox_2" value = 2 aria-label="Checkbox for following text input" >
+              </div>
+            </div>
+            <input type="text" class="form-control" name = "option_2" placeholder="Option - 2 (If many seperat them by '$$')" aria-label="Option - 2 ">
+          </div>
+             
+        </div>
+    </div>
+    <div class="row">
+        
+        <div class="col mb-3"><div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="checkbox_3" value = 3 aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input type="text" class="form-control" name = "option_3" placeholder="Option - 3 (If many seperat them by '$$')" aria-label="Option - 3 ">
+          </div>
+             
+        </div>
+
+        <div class="col mb-3"><div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="checkbox_4" value = 4 aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input type="text" class="form-control" name = "option_4" placeholder="Option - 4 (If many seperat them by '$$')" aria-label="Option - 4 ">
+          </div>
+        </div>
+    </div>
+    <div class="col mb-3">
+    <input type="text" class="form-control"  name="Explanation" placeholder="Explanation (If many seperat them by '$$')" aria-label="Explanation "> 
+    <hr style="height:5px;border-width:10;color:rgb(255, 0, 0);background-color:rgb(255, 0, 0)">
+
+    </div>
+
+    <div class="row" >
+        <label for="formGroupExampleInput" class="form-label"> <b> Image Contain Options (Provide google drive links here)</b></label>
+        <div class="col mb-3"><div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="checkbox_img_1" value = 1 aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input type="text" class="form-control" name="img_option_1" placeholder="Option - 1 Image link. (If many seperat them by '$$')" aria-label="Option - 1 ">
+          </div>
+             
+        </div>
+
+        <div class="col mb-3"><div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="checkbox_img_2" aria-label="Checkbox for following text input" >
+              </div>
+            </div>
+            <input type="text" class="form-control"  name="img_option_2" placeholder="Option - 2 Image link. (If many seperat them by '$$')" aria-label="Option - 2 ">
+          </div>
+             
+        </div>
+    </div>
+    <div class="row">
+        
+        <div class="col mb-3"><div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="checkbox_img_3" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input type="text" class="form-control"  name="img_option_3" placeholder="Option - 3 Image link. (If many seperat them by '$$')" aria-label="Option - 3 ">
+          </div>
+             
+        </div>
+
+        <div class="col mb-3"><div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" name="checkbox_img_4" aria-label="Checkbox for following text input">
+              </div>
+            </div>
+            <input type="text" class="form-control"  name="img_option_4"  placeholder="Option - 4 Image link. (If many seperat them by '$$')" aria-label="Option - 4 ">
+          </div>
+        </div>
+        </div>
+    <div class="col mb-3">
+        <input type="text" class="form-control" placeholder="Explanation Image link. (If many seperat them by '$$')" aria-label="Explanation " name="Explanation_img"> 
+        </div>
+        <hr style="height:5px;border-width:10;color:rgb(255, 6, 6);background-color:rgb(255, 0, 0)">
+        <div class="row">
+            <div class="d-grid gap-2 col-6 mx-auto col mb-3 ">
+                <button type="submit" name = "submit_button" value = "submit_button" class="btn btn-outline-dark btn-lg">Submit</button>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto col mb-3">
+                <button type="submit" name = "finish_button" value = "finish_button" class="btn btn-outline-dark btn-lg">Finish</button>
+            </div>
+        </div>
+</form>
+
+
+{% endblock %}quizzes
